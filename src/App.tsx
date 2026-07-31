@@ -121,7 +121,9 @@ export default function App() {
       src: awicon, 
       onClick: () => setProyectoActivo("AnimeWorld") // <- ABRE ANIMEWORLD.TSX
     },
-    { src: lticon },
+    { src: lticon,
+      onClick: () => window.open("https://vion-developer.github.io/VIONLottiePlayer/", "_blank")
+     },
     { src: jnicon }
   ];
 

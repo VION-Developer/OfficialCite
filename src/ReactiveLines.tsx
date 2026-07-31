@@ -193,7 +193,7 @@ export default function InteractiveLines({
   const { containerRef, canvasRef, stateRef } = useCanvasAnimation({
     deferStart: true,
 
-    onSetup: (e, t) => {
+    onSetup: (_e, t) => {
       mouseRef.current.targetX = t.width / 2;
       mouseRef.current.targetY = t.height / 2;
       mouseRef.current.x = t.width / 2;
