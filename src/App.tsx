@@ -409,7 +409,8 @@ export default function App() {
         <div style={{
           position: "fixed",
           inset: 0,
-          backgroundColor: "#000000",
+          background: "radial-gradient(circle at top, rgba(0,247,255,0.08), rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.96) 100%)",
+          backdropFilter: "blur(10px)",
           zIndex: 100,
           padding: "80px 20px 40px",
           overflowY: "auto",

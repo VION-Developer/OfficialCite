@@ -369,15 +369,16 @@ export default function NeonBorder(props: Props) {
                 position: "relative",
                 width: "100%",
                 height: "100%",
+                display: "block",
                 flexShrink: 0,
                 borderRadius: radius,
+                overflow: "visible",
                 ...style,
             }}
         >
             {glowGroup(0, groupARef)}
             {glowGroup(0.5, groupBRef)}
 
-            {/* Content wrapper: ensure children render above the glow and are positioned correctly */}
             <div style={{ position: "relative", zIndex: 1, width: "100%", height: "100%" }}>
                 {children}
             </div>

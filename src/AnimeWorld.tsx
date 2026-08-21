@@ -40,10 +40,19 @@ export default function AnimeWorld() {
   };
 
   return (
-    <div style={{ color: "#ffffff", padding: "40px 20px", textAlign: "center", fontFamily: "system-ui, sans-serif" }}>
+    <div style={{
+      color: "#ffffff",
+      padding: "40px 20px 60px",
+      textAlign: "center",
+      fontFamily: "system-ui, sans-serif",
+      background: "radial-gradient(circle at top, rgba(204,145,73,0.12), rgba(0,0,0,0.0) 38%)",
+      borderRadius: "28px",
+      width: "100%",
+      boxSizing: "border-box"
+    }}>
       
       {/* Título del Proyecto */}
-      <h1 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: "bold", color: "#ffffff", marginBottom: "16px" }}>
+      <h1 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: "bold", color: "#ffffff", marginBottom: "16px", letterSpacing: "-0.06em" }}>
         Anime World
       </h1>
       
@@ -72,36 +81,31 @@ export default function AnimeWorld() {
       <div style={{
         // Contenedor principal que define el área y el margen
         width: "100%",
-        maxWidth: "600px",
+        maxWidth: "660px",
         margin: "0 auto 50px", 
         position: "relative",
-        // Permitir que el glow del NeonBorder sea visible
         overflow: "visible",
-        borderRadius: "20px", // Debe coincidir con el 'rounded' del NeonBorder
+        borderRadius: "24px",
+        boxShadow: "0 0 30px rgba(94,153,255,0.18)",
       }}>
         
         {/* Aqui integramos el componente NeonBorder */}
         {/* Usamos los mismos valores de redondeo (20) y un color neón personalizado */}
         <NeonBorder 
-            rounded={24}        // Coincide con el borderRadius del contenedor padre
-            thickness={4}       // Ajusta el grosor del borde
-            glow={100}           // Máximo brillo
-            color="#5e99ff"     // Usamos tu color corporativo de Originkit
+            rounded={24}
+            thickness={4}
+            glow={100}
+            color="#5e99ff"
             movement="continuous"
             speed={16}
         >
             {/* Contenido de la tarjeta (que envuelve NeonBorder) */}
             <div style={{
               ...commonCardStyle,
-              // Eliminamos el borde original ya que el NeonBorder lo reemplaza
               border: "none",
-              // Aseguramos que el contenido interno tenga padding y no se pegue al borde
               width: "100%",
-              // No forzar altura al 100% para que el contenedor se dimensione por su contenido
-              // (necesario para que NeonBorder calcule correctamente size via ResizeObserver)
-              // height: "100%",
-              // Fondo definido para que no se vea el efecto de neón a través del texto
-              background: "#0b0b0e",
+              background: "linear-gradient(180deg, rgba(11,11,14,0.98) 0%, rgba(11,11,14,0.96) 100%)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)",
             }}>
               <h3 style={{ fontSize: "20px", marginBottom: "10px", color: "#ffffff" }}>
                 Detalles de la Aplicación
