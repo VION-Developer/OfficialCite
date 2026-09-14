@@ -3,257 +3,301 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio | Senior Software Developer</title>
+  <title>VION Developer</title>
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Fuentes e Iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="dark-theme">
 
-  <!-- Navegación -->
-  <header class="navbar">
-    <a href="#hero" class="logo">PORTFOLIO<span>.</span></a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">Sobre Mí</a>
-      <a href="#skills">Habilidades</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#gallery">Fotos</a>
-      <a href="#testimonials">Referencias</a>
-      <a href="#contact" class="btn-nav">Contacto</a>
-    </nav>
-    <div class="menu-toggle" id="menuToggle">
-      <i class="fa-solid fa-bars"></i>
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Navegación-->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-bracket">[</span>VION<span class="logo-dot">.</span>Dev<span class="logo-bracket">]</span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">Arquitectura</a>
+        <a href="#skills" class="nav-link">Stack</a>
+        <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#gallery" class="nav-link">Entorno</a>
+        <a href="#testimonials" class="nav-link">Testimonios</a>
+        <a href="#contact" class="nav-btn">Conectar</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menú">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
     </div>
   </header>
 
   <main>
-    <!-- Hero / Presentación -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <div class="status-pill">
-          <span class="status-dot"></span> Disponible para nuevos proyectos
+    <!-- Hero-->
+    <section id="hero" class="hero-section">
+      <div class="hero-wrapper">
+        <div class="pill-badge reveal">
+          <!--
+          <span class="pulse-beacon"></span>
+           -->
+          <span class="badge-text">Inovando en cada linea de código</span>
         </div>
-        <h1 class="hero-title">
-          Desarrollo de software con <br>
-          <span class="text-gradient">precisión, rendimiento y escala.</span>
+
+        <h1 class="hero-headline reveal"><br class="desktop-break">
+          <span class="shimmer-text">VION developer</span>
         </h1>
-        <p class="hero-description">
-          Construyo aplicaciones modernas, sistemas robustos e interfaces limpias enfocadas en la máxima experiencia de usuario y arquitectura limpia.
+
+        <p class="hero-subtext reveal">
+         Desarrollamos soluciones de software robustas y escalables, optimizadas para rendimiento y seguridad, con un enfoque en la arquitectura limpia y modular, asi mismo tenemos nuestros proyector personales como aplicaciones móviles.
         </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn-primary">Explorar Proyectos <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#contact" class="btn-secondary">Iniciar Conversación</a>
+
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn-glow-primary">
+            <span>Apps</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn-subtle">
+            <span>Comprar Software</span>
+          </a>
+        </div>
+
+        <div class="metrics-row reveal">
+          <div class="metric-block">
+            <span class="metric-value" data-counter="1">0</span><span class="metric-suffix">+</span>
+            <span class="metric-label">APPSS Desplegadas</span>
+          </div>
+          <div class="metric-separator"></div>
+          <div class="metric-block">
+            <span class="metric-value" data-counter="99">0</span><span class="metric-suffix">.9%</span>
+            <span class="metric-label">Optimización garantizada</span>
+          </div>
+          <div class="metric-separator"></div>
+          <div class="metric-block">
+            <span class="metric-value" data-counter="100">0</span><span class="metric-suffix">%</span>
+            <span class="metric-label">Código Probado & Modular</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Sobre Mí / Información -->
+    <!-- Información / Filosofía de Arquitectura -->
     <section id="about" class="section">
-      <div class="section-label">EXPERIENCIA & ENFOQUE</div>
-      <h2 class="section-heading">Principios de Ingeniería</h2>
+      <div class="section-badge reveal">FILOSOFÍA TÉCNICA</div>
+      <h2 class="section-title reveal">Principios de Desarrollo</h2>
       
-      <div class="grid-three">
-        <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-          <h3>Código Limpio & Mantenible</h3>
-          <p>Estructura modular siguiendo principios SOLID, pruebas unitarias y documentación transparente para fácil escalabilidad.</p>
+      <div class="cards-grid">
+        <div class="spotlight-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Arquitectura Limpia & Modular</h3>
+          <p>Desacoplamiento estricto de la lógica de negocio, patrones de diseño testeables y reducción técnica de dependencias.</p>
         </div>
-        <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-gauge-high"></i></div>
-          <h3>Optimización Extrema</h3>
-          <p>Priorización de velocidad de carga, consumo mínimo de memoria y reducción de latencia en cada endpoint e interfaz.</p>
+
+        <div class="spotlight-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+          <h3>Latencia & Optimización</h3>
+          <p>Métricas Core Web Vitals en verde, minimización de renders redundantes y algoritmos con complejidad asintótica eficiente.</p>
         </div>
-        <div class="card">
-          <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3>Seguridad por Diseño</h3>
-          <p>Autenticación robusta, sanitización de datos y cumplimiento con los estándares modernos de privacidad.</p>
+
+        <div class="spotlight-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <h3>Seguridad & Privacidad</h3>
+          <p>Implementación rigurosa de OWASP, autenticación robusta mediante tokens seguros y sanitización integral de datos.</p>
         </div>
       </div>
     </section>
 
-    <!-- Tecnologías Usadas -->
+    <!-- Stack Tecnológico -->
     <section id="skills" class="section">
-      <div class="section-label">STACK TECNOLÓGICO</div>
-      <h2 class="section-heading">Herramientas & Frameworks</h2>
+      <div class="section-badge reveal">CAPACIDADES</div>
+      <h2 class="section-title reveal">Tecnologías Principales</h2>
 
-      <div class="skills-wrap">
-        <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript / TypeScript</div>
-        <div class="skill-item"><i class="fa-brands fa-android"></i> Kotlin / Android SDK</div>
-        <div class="skill-item"><i class="fa-brands fa-node-js"></i> Node.js / Express</div>
-        <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git & GitHub Workflows</div>
-        <div class="skill-item"><i class="fa-solid fa-database"></i> PostgreSQL / Firebase</div>
-        <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5 / CSS3 / Sass</div>
-        <div class="skill-item"><i class="fa-solid fa-network-wired"></i> RESTful APIs & GraphQL</div>
-        <div class="skill-item"><i class="fa-brands fa-docker"></i> Docker / Cloud Deploy</div>
+     <div class="skills-grid reveal">
+        <div class="tech-chip"><i class="fa-brands fa-js"></i> JavaScript (ESNext)</div>
+        <div class="tech-chip"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="tech-chip"><i class="fa-brands fa-java"></i> Java</div>
+        <div class="tech-chip"><i class="fa-brands fa-android"></i> Android / Kotlin</div>
+        <div class="tech-chip"><i class="fa-brands fa-node"></i> Node.js Runtime</div>
+        <div class="tech-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</div>
+        <div class="tech-chip"><i class="fa-brands fa-git-alt"></i> Git Flow / CI-CD</div>
+        <div class="tech-chip"><i class="fa-solid fa-database"></i> SQL & NoSQL Systems</div>
+        <div class="tech-chip"><i class="fa-solid fa-code-branch"></i> Arquitectura REST / WebSockets</div>
+        <div class="tech-chip"><i class="fa-brands fa-css3-alt"></i> CSS Avanzado / Canvas 2D</div>
       </div>
     </section>
 
-    <!-- Proyectos -->
+    <!-- Proyectos con Logo Cuadrado y Bordes Redondeados -->
     <section id="projects" class="section">
-      <div class="section-label">CASOS DE ESTUDIO</div>
-      <h2 class="section-heading">Proyectos Destacados</h2>
+      <div class="section-badge reveal">APPS</div>
+      <h2 class="section-title reveal">Nuestro portafolio</h2>
 
-      <div class="grid-three">
-        <!-- Proyecto 1 -->
-        <div class="project-card">
+      <div class="projects-container">
+        <!-- Proyecto 1 / Anime World -->
+        <article class="project-spotlight reveal">
           <div class="project-header">
-            <!-- Imagen cuadrada con bordes redondeados (Logo del proyecto) -->
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=160&auto=format&fit=crop&q=80" alt="Logo de Aplicación Social" class="project-logo">
-            <div>
-              <span class="category-tag">Móvil & Backend</span>
-              <h3 class="project-title">Anime Social Platform</h3>
+            <div class="logo-box">
+              <img src="images/apps_icons/app_icon.png.png" alt="Logo de Anime Wor;
+              b" class="project-brand-img">
+            </div>
+            <div class="project-meta">
+              <span class="project-category">Android</span>
+              <h3 class="project-name">Anime World</h3>
             </div>
           </div>
-          <p class="project-desc">
-            Red social optimizada con mensajería instantánea, feeds personalizados y gestión multimedia asíncrona.
-          </p>
-          <div class="project-tags">
-            <span>Android</span>
-            <span>Clean Architecture</span>
+          <p class="project-summary">
+            La red social para otakus: Chat, salas de audio en vivo y comunidad anime.
+          <div class="tag-row">
+            <span>Kotlin</span>
+            <span>Java</span>
+            <span>JavaScript</span>
             <span>Firebase</span>
           </div>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Repositorio</a>
-            <a href="#" class="project-link link-highlight"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+          <div class="project-actions">
+            <a href="#" class="action-btn action-active"><i class="fa-solid fa-arrow-up-right-from-square"></i> Descargar</a>
           </div>
-        </div>
-
-        <!-- Proyecto 2 -->
-        <div class="project-card">
-          <div class="project-header">
-            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=160&auto=format&fit=crop&q=80" alt="Logo de Motor PDF" class="project-logo">
-            <div>
-              <span class="category-tag">Productividad & Cloud</span>
-              <h3 class="project-title">Document Suite Engine</h3>
-            </div>
-          </div>
-          <p class="project-desc">
-            Motor de procesamiento y transformación de documentos masivos en segundo plano con alta concurrencia.
-          </p>
-          <div class="project-tags">
-            <span>JavaScript</span>
-            <span>PDF Pipeline</span>
-            <span>APIs</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Repositorio</a>
-            <a href="#" class="project-link link-highlight"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
-          </div>
-        </div>
-
-        <!-- Proyecto 3 -->
-        <div class="project-card">
-          <div class="project-header">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=160&auto=format&fit=crop&q=80" alt="Logo de Videojuego Web" class="project-logo">
-            <div>
-              <span class="category-tag">Web Graphics & Audio</span>
-              <h3 class="project-title">Web Game Engine</h3>
-            </div>
-          </div>
-          <p class="project-desc">
-            Aplicación interactiva ejecutada enteramente en el cliente mediante Canvas 2D y síntesis por Web Audio API.
-          </p>
-          <div class="project-tags">
-            <span>Canvas 2D</span>
-            <span>Web Audio API</span>
-            <span>Vanilla JS</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Repositorio</a>
-            <a href="#" class="project-link link-highlight"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- Galería del Desarrollador -->
+    <!-- Carrusel Interactivo de Fotos del Desarrollador -->
     <section id="gallery" class="section">
-      <div class="section-label">ENTORNO DE TRABAJO</div>
-      <h2 class="section-heading">Enfoque & Espacio</h2>
-
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&auto=format&fit=crop&q=80" alt="Workspace">
-          <div class="gallery-caption">Estación de desarrollo y pruebas de rendimiento</div>
-        </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=700&auto=format&fit=crop&q=80" alt="Planificación">
-          <div class="gallery-caption">Diseño técnico y estructuración de bases de datos</div>
-        </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&auto=format&fit=crop&q=80" alt="Flujo de trabajo">
-          <div class="gallery-caption">Code review y optimización continua</div>
+      <div class="section-badge reveal">// ENTORNO & RUTINA</div>
+      <div class="section-header-flex reveal">
+        <h2 class="section-title">El Desarrollador en Acción</h2>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev" id="carouselPrev" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente foto"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
+
+      <div class="carousel-viewport" id="carouselViewport">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <div class="slide-card">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&auto=format&fit=crop&q=80" alt="Setup del desarrollador">
+              <div class="slide-meta">
+                <span class="slide-tag">Setup & Hardware</span>
+                <h4>Entorno de ingeniería multi-pantalla optimizado para productividad</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <div class="slide-card">
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&auto=format&fit=crop&q=80" alt="Diseño de Arquitectura">
+              <div class="slide-meta">
+                <span class="slide-tag">Diagramación & Lógica</span>
+                <h4>Modelado estructural y esquematización previa de microservicios</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <div class="slide-card">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80" alt="Sesión de Code Review">
+              <div class="slide-meta">
+                <span class="slide-tag">Auditoría & QA</span>
+                <h4>Inspección minuciosa de pull requests y cobertura de testing</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="carousel-slide">
+            <div class="slide-card">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&auto=format&fit=crop&q=80" alt="Desarrollo Mobile y Web">
+              <div class="slide-meta">
+                <span class="slide-tag">Despliegue & Build</span>
+                <h4>Compilación automatizada y pruebas de integración continua</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Indicadores de barra de progreso del carrusel -->
+      <div class="carousel-indicators" id="carouselIndicators"></div>
     </section>
 
-    <!-- Referencias / Comentarios -->
+    <!-- Testimonios / Feedback -->
     <section id="testimonials" class="section">
-      <div class="section-label">OPINIONES</div>
-      <h2 class="section-heading">Lo que dicen sobre mi trabajo</h2>
+      <div class="section-badge reveal">// RECONOCIMIENTOS</div>
+      <h2 class="section-title reveal">Comentarios & Referencias</h2>
 
-      <div class="grid-two">
-        <div class="review-card">
-          <p class="review-text">"Demostró una capacidad de análisis técnico sobresaliente. Diseñó el proyecto desde cero con una arquitectura que hoy soporta nuestro tráfico sin inconvenientes."</p>
-          <div class="review-author">
-            <div class="author-avatar">JD</div>
-            <div>
-              <h4>Jonathan Davis</h4>
-              <small>Líder Técnico, Apex Solutions</small>
+      <div class="reviews-grid">
+        <div class="review-item reveal">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-quote">"Su criterio arquitectónico transformó un prototipo inestable en un sistema sólido capaz de escalar sin fricción técnica. Un desarrollador con estándares impecables."</p>
+          <div class="reviewer">
+            <div class="reviewer-badge">JD</div>
+            <div class="reviewer-info">
+              <h5>Jonathan Davis</h5>
+              <span>Director de Ingeniería, Apex Cloud</span>
             </div>
           </div>
         </div>
 
-        <div class="review-card">
-          <p class="review-text">"Puntualidad, código extremadamente ordenado y una interfaz limpia. Cumplió cada hito técnico antes del plazo pactado."</p>
-          <div class="review-author">
-            <div class="author-avatar">MR</div>
-            <div>
-              <h4>María Rosales</h4>
-              <small>Gerente de Producto, Nexus Dev</small>
+        <div class="review-item reveal">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-quote">"Pocas veces encuentras a alguien que domine con tanta naturalidad la robustez del código y la elegancia visual de la interfaz. Los tiempos de entrega fueron inmejorables."</p>
+          <div class="reviewer">
+            <div class="reviewer-badge">MR</div>
+            <div class="reviewer-info">
+              <h5>María Rosales</h5>
+              <span>VP de Producto, Horizon Tech</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contact" class="section">
-      <div class="contact-box">
-        <div class="section-label">CONTACTO</div>
-        <h2 class="section-heading">¿Tienes un proyecto en mente?</h2>
-        <p class="contact-sub">Envíame un mensaje y evaluemos cómo llevarlo a producción de forma eficiente.</p>
+    <!-- Sección de Contacto -->
+    <section id="contact" class="section contact-section">
+      <div class="contact-card reveal">
+        <div class="section-badge">// INICIAR CONTACTO</div>
+        <h2 class="contact-title">Construyamos el próximo sistema</h2>
+        <p class="contact-desc">Déjame tus datos y los requerimientos del proyecto. Respondo con una propuesta técnica preliminar en menos de 24 horas.</p>
 
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-control">
-              <label for="name">Nombre</label>
-              <input type="text" id="name" placeholder="Tu nombre" required>
+        <form class="interactive-form" id="contactForm">
+          <div class="input-grid">
+            <div class="field-wrapper">
+              <label for="name">Nombre / Organización</label>
+              <input type="text" id="name" required placeholder="Ej. Alexander Hamilton">
             </div>
-            <div class="form-control">
-              <label for="email">Correo</label>
-              <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+            <div class="field-wrapper">
+              <label for="email">Correo Corporativo</label>
+              <input type="email" id="email" required placeholder="alexander@empresa.com">
             </div>
           </div>
-          <div class="form-control">
-            <label for="message">Mensaje</label>
-            <textarea id="message" rows="4" placeholder="Breve descripción de tus requerimientos..." required></textarea>
+          <div class="field-wrapper">
+            <label for="message">Alcance del Proyecto</label>
+            <textarea id="message" rows="4" required placeholder="Describe objetivos, tiempos estimados y stack preferido..."></textarea>
           </div>
-          <button type="submit" class="btn-primary btn-submit">Enviar Mensaje</button>
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span>Enviar Requerimientos</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2026 Developer Portfolio. Todos los derechos reservados.</p>
-    <div class="footer-links">
-      <a href="#"><i class="fa-brands fa-github"></i></a>
-      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+  <!-- Footer Profesional -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <span class="footer-logo">[DEV.CORE]</span>
+        <p>Software Engineering Portfolio &copy; 2026. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
     </div>
   </footer>
 
