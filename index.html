@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Senior Software Developer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Fuentes e Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="navbar">
+    <a href="#hero" class="logo">PORTFOLIO<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">Sobre Mí</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#gallery">Fotos</a>
+      <a href="#testimonials">Referencias</a>
+      <a href="#contact" class="btn-nav">Contacto</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Presentación -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="status-pill">
+          <span class="status-dot"></span> Disponible para nuevos proyectos
+        </div>
+        <h1 class="hero-title">
+          Desarrollo de software con <br>
+          <span class="text-gradient">precisión, rendimiento y escala.</span>
+        </h1>
+        <p class="hero-description">
+          Construyo aplicaciones modernas, sistemas robustos e interfaces limpias enfocadas en la máxima experiencia de usuario y arquitectura limpia.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">Explorar Proyectos <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn-secondary">Iniciar Conversación</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí / Información -->
+    <section id="about" class="section">
+      <div class="section-label">EXPERIENCIA & ENFOQUE</div>
+      <h2 class="section-heading">Principios de Ingeniería</h2>
+      
+      <div class="grid-three">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Código Limpio & Mantenible</h3>
+          <p>Estructura modular siguiendo principios SOLID, pruebas unitarias y documentación transparente para fácil escalabilidad.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Optimización Extrema</h3>
+          <p>Priorización de velocidad de carga, consumo mínimo de memoria y reducción de latencia en cada endpoint e interfaz.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Seguridad por Diseño</h3>
+          <p>Autenticación robusta, sanitización de datos y cumplimiento con los estándares modernos de privacidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologías Usadas -->
+    <section id="skills" class="section">
+      <div class="section-label">STACK TECNOLÓGICO</div>
+      <h2 class="section-heading">Herramientas & Frameworks</h2>
+
+      <div class="skills-wrap">
+        <div class="skill-item"><i class="fa-brands fa-js"></i> JavaScript / TypeScript</div>
+        <div class="skill-item"><i class="fa-brands fa-android"></i> Kotlin / Android SDK</div>
+        <div class="skill-item"><i class="fa-brands fa-node-js"></i> Node.js / Express</div>
+        <div class="skill-item"><i class="fa-brands fa-git-alt"></i> Git & GitHub Workflows</div>
+        <div class="skill-item"><i class="fa-solid fa-database"></i> PostgreSQL / Firebase</div>
+        <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5 / CSS3 / Sass</div>
+        <div class="skill-item"><i class="fa-solid fa-network-wired"></i> RESTful APIs & GraphQL</div>
+        <div class="skill-item"><i class="fa-brands fa-docker"></i> Docker / Cloud Deploy</div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects" class="section">
+      <div class="section-label">CASOS DE ESTUDIO</div>
+      <h2 class="section-heading">Proyectos Destacados</h2>
+
+      <div class="grid-three">
+        <!-- Proyecto 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <!-- Imagen cuadrada con bordes redondeados (Logo del proyecto) -->
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=160&auto=format&fit=crop&q=80" alt="Logo de Aplicación Social" class="project-logo">
+            <div>
+              <span class="category-tag">Móvil & Backend</span>
+              <h3 class="project-title">Anime Social Platform</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Red social optimizada con mensajería instantánea, feeds personalizados y gestión multimedia asíncrona.
+          </p>
+          <div class="project-tags">
+            <span>Android</span>
+            <span>Clean Architecture</span>
+            <span>Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Repositorio</a>
+            <a href="#" class="project-link link-highlight"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=160&auto=format&fit=crop&q=80" alt="Logo de Motor PDF" class="project-logo">
+            <div>
+              <span class="category-tag">Productividad & Cloud</span>
+              <h3 class="project-title">Document Suite Engine</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Motor de procesamiento y transformación de documentos masivos en segundo plano con alta concurrencia.
+          </p>
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>PDF Pipeline</span>
+            <span>APIs</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Repositorio</a>
+            <a href="#" class="project-link link-highlight"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=160&auto=format&fit=crop&q=80" alt="Logo de Videojuego Web" class="project-logo">
+            <div>
+              <span class="category-tag">Web Graphics & Audio</span>
+              <h3 class="project-title">Web Game Engine</h3>
+            </div>
+          </div>
+          <p class="project-desc">
+            Aplicación interactiva ejecutada enteramente en el cliente mediante Canvas 2D y síntesis por Web Audio API.
+          </p>
+          <div class="project-tags">
+            <span>Canvas 2D</span>
+            <span>Web Audio API</span>
+            <span>Vanilla JS</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Repositorio</a>
+            <a href="#" class="project-link link-highlight"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería del Desarrollador -->
+    <section id="gallery" class="section">
+      <div class="section-label">ENTORNO DE TRABAJO</div>
+      <h2 class="section-heading">Enfoque & Espacio</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&auto=format&fit=crop&q=80" alt="Workspace">
+          <div class="gallery-caption">Estación de desarrollo y pruebas de rendimiento</div>
+        </div>
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=700&auto=format&fit=crop&q=80" alt="Planificación">
+          <div class="gallery-caption">Diseño técnico y estructuración de bases de datos</div>
+        </div>
+        <div class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&auto=format&fit=crop&q=80" alt="Flujo de trabajo">
+          <div class="gallery-caption">Code review y optimización continua</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referencias / Comentarios -->
+    <section id="testimonials" class="section">
+      <div class="section-label">OPINIONES</div>
+      <h2 class="section-heading">Lo que dicen sobre mi trabajo</h2>
+
+      <div class="grid-two">
+        <div class="review-card">
+          <p class="review-text">"Demostró una capacidad de análisis técnico sobresaliente. Diseñó el proyecto desde cero con una arquitectura que hoy soporta nuestro tráfico sin inconvenientes."</p>
+          <div class="review-author">
+            <div class="author-avatar">JD</div>
+            <div>
+              <h4>Jonathan Davis</h4>
+              <small>Líder Técnico, Apex Solutions</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p class="review-text">"Puntualidad, código extremadamente ordenado y una interfaz limpia. Cumplió cada hito técnico antes del plazo pactado."</p>
+          <div class="review-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <h4>María Rosales</h4>
+              <small>Gerente de Producto, Nexus Dev</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section">
+      <div class="contact-box">
+        <div class="section-label">CONTACTO</div>
+        <h2 class="section-heading">¿Tienes un proyecto en mente?</h2>
+        <p class="contact-sub">Envíame un mensaje y evaluemos cómo llevarlo a producción de forma eficiente.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-control">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-control">
+              <label for="email">Correo</label>
+              <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+            </div>
+          </div>
+          <div class="form-control">
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="4" placeholder="Breve descripción de tus requerimientos..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">Enviar Mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Developer Portfolio. Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
