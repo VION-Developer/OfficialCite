@@ -266,20 +266,21 @@
         <h2 class="contact-title">Construyamos el próximo sistema</h2>
         <p class="contact-desc">Déjame tus datos y los requerimientos del proyecto, o bien, dejanos un comentario.</p>
 
-        <form class="interactive-form" id="contactForm">
+        <form class="interactive-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="9fcd2b5e-ad86-4650-b113-1be319b0546e">
           <div class="input-grid">
             <div class="field-wrapper">
               <label for="name">Nombre / Organización</label>
-              <input type="text" id="name" required placeholder="Ej. Alexander Hamilton">
+              <input type="text" id="name" name="name" required placeholder="Ej. Alexander Hamilton">
             </div>
             <div class="field-wrapper">
               <label for="email">Correo</label>
-              <input type="email" id="email" required placeholder="alexander@empresa.com">
+              <input type="email" id="email" name="email" required placeholder="alexander@empresa.com">
             </div>
           </div>
           <div class="field-wrapper">
             <label for="message">Mensaje</label>
-            <textarea id="message" rows="4" required placeholder="Describe objetivos, tiempos estimados y stack preferido..."></textarea>
+            <textarea id="message" name="message" rows="4" required placeholder="Describe objetivos, tiempos estimados y stack preferido..."></textarea>
           </div>
           <button type="submit" class="btn-submit" id="submitBtn">
             <span>Enviar</span>
@@ -294,13 +295,11 @@
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-left">
-        <span class="footer-logo">[DEV.CORE]</span>
-        <p>Software Engineering Portfolio &copy; 2026. Todos los derechos reservados.</p>
+        <span class="footer-logo">[VION.Dev]</span>
+        <p>VION Dev &copy; 2026. Todos los derechos reservados.</p>
       </div>
       <div class="footer-socials">
-        <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/VION-Developer" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
       </div>
     </div>
   </footer>
