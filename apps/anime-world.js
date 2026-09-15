@@ -8,12 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
     web: 'Web disponible en navegador'
   };
 
+  const platformUrls = {
+    android: 'https://play.google.com/store/apps/details?id=ap.anime.world',
+    web: 'https://anime-social-network.web.app/web-app/login'
+  };
+
   platformButtons.forEach((button) => {
     button.addEventListener('click', () => {
       platformButtons.forEach((btn) => btn.classList.remove('active'));
       button.classList.add('active');
       const platform = button.dataset.platform;
       platformStatus.textContent = statusMap[platform] || 'Disponible';
+
+      if (platformUrls[platform]) {
+        window.open(platformUrls[platform], '_blank', 'noopener,noreferrer');
+      }
     });
   });
 
