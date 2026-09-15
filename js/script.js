@@ -268,15 +268,28 @@ startAutoPlay();
 const contactForm = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  
+
   const originalHTML = submitBtn.innerHTML;
   submitBtn.disabled = true;
   submitBtn.innerHTML = `<span>Procesando...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
   submitBtn.style.opacity = '0.8';
 
-  setTimeout(() => {
+  try {
+    const response = await fetch(contactForm.action, {
+      method: contactForm.method,
+      body: new FormData(contactForm),
+      headers: {
+        Accept: 'application/json'
+      }
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'No se pudo enviar el formulario');
+    }
+
     submitBtn.innerHTML = `<span>Solicitud Enviada con Éxito</span> <i class="fa-solid fa-check"></i>`;
     submitBtn.style.background = '#10b981';
     submitBtn.style.color = '#fff';
@@ -290,5 +303,17 @@ contactForm.addEventListener('submit', (e) => {
       submitBtn.style.color = '';
       submitBtn.disabled = false;
     }, 4000);
-  }, 1200);
+  } catch (error) {
+    submitBtn.innerHTML = `<span>Error al enviar</span> <i class="fa-solid fa-circle-exclamation"></i>`;
+    submitBtn.style.background = '#dc2626';
+    submitBtn.style.color = '#fff';
+    submitBtn.style.opacity = '1';
+
+    setTimeout(() => {
+      submitBtn.innerHTML = originalHTML;
+      submitBtn.style.background = '';
+      submitBtn.style.color = '';
+      submitBtn.disabled = false;
+    }, 4000);
+  }
 });
