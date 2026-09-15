@@ -497,6 +497,51 @@
 }
 
 @media (max-width: 720px) {
+  .screens-carousel {
+    display: block;
+    position: relative;
+  }
+
+  .screens-viewport {
+    width: 100%;
+  }
+
+  .screens-track {
+    gap: 12px;
+    padding: 8px;
+  }
+
+  .screen-card-item,
+  .screen-card-item.is-video {
+    min-width: min(300px, calc(100vw - 80px));
+    width: min(300px, calc(100vw - 80px));
+    height: auto;
+    aspect-ratio: 3 / 5;
+  }
+
+  .screen-card-item img,
+  .screen-card-item video {
+    object-fit: contain;
+  }
+
+  .screen-carousel-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 42px;
+    height: 42px;
+    transform: translateY(-50%);
+    background: rgba(4, 4, 6, 0.78);
+  }
+
+  .screen-carousel-btn.prev {
+    left: 8px;
+  }
+
+  .screen-carousel-btn.next {
+    right: 8px;
+  }
+
   .feature-list {
     grid-template-columns: 1fr;
   }
@@ -518,10 +563,6 @@
 
   .app-info-grid {
     grid-template-columns: 1fr;
-  }
-
-  .screen-card-item img {
-    height: 420px;
   }
 
   .download-card {
