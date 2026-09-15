@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const platformButtons = document.querySelectorAll('.platform-btn');
   const platformStatus = document.getElementById('platformStatus');
+  const downloadModal = document.getElementById('downloadModal');
+  const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+  const downloadOptions = document.querySelectorAll('[data-download-option]');
 
   const statusMap = {
     android: 'Android disponible',
@@ -9,9 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const platformUrls = {
-    android: 'https://play.google.com/store/apps/details?id=ap.anime.world',
+    googlePlay: 'https://play.google.com/store/apps/details?id=ap.anime.world',
+    apk: 'https://firebasestorage.googleapis.com/v0/b/anime-social-network.firebasestorage.app/o/apks%2FAnimeWorld.V.1.3.apk?alt=media&token=519fad4e-a78d-4fc6-bda8-4bb24d0b117a',
     web: 'https://anime-social-network.web.app/web-app/login'
   };
+
+  function setModalVisibility(isVisible) {
+    if (!downloadModal) return;
+    downloadModal.classList.toggle('is-open', isVisible);
+    downloadModal.setAttribute('aria-hidden', String(!isVisible));
+    document.body.classList.toggle('modal-open', isVisible);
+  }
 
   platformButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -20,10 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
       const platform = button.dataset.platform;
       platformStatus.textContent = statusMap[platform] || 'Disponible';
 
+      if (platform === 'android') {
+        setModalVisibility(true);
+        return;
+      }
+
       if (platformUrls[platform]) {
         window.open(platformUrls[platform], '_blank', 'noopener,noreferrer');
       }
     });
+  });
+
+  modalCloseButtons.forEach((button) => {
+    button.addEventListener('click', () => setModalVisibility(false));
+  });
+
+  downloadOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      const destination = platformUrls[option.dataset.downloadOption === 'google-play' ? 'googlePlay' : 'apk'];
+      setModalVisibility(false);
+      window.open(destination, '_blank', 'noopener,noreferrer');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setModalVisibility(false);
   });
 
   const featureItems = document.querySelectorAll('.feature-item');
