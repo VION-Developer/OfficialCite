@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Easer | Descarga la App</title>
+  <link rel="icon" type="image/png" href="../images/apps_icons/app_icon2.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="ps/photo-easer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme app-page">
+  <canvas id="ambient-canvas"></canvas>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-bracket">[</span>VION<span class="logo-dot">.</span>Dev<span class="logo-bracket">]</span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#overview" class="nav-link">Resumen</a>
+        <a href="#features" class="nav-link">Funciones</a>
+        <a href="#screens" class="nav-link">Capturas</a>
+        <a href="#reviews" class="nav-link">Reseñas</a>
+        <a href="#download" class="nav-btn">Descargar</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menú">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="app-hero section">
+      <div class="app-hero-copy reveal">
+        <div class="app-brand-row">
+          <img src="../images/apps_icons/app_icon2.png" alt="Logo de Photo Easer" class="app-brand-logo">
+          <div class="app-brand-meta">
+            <span class="app-brand-name">Photo Easer</span>
+            <small>Editor de Imágenes</small>
+          </div>
+        </div>
+
+        <div class="pill-badge">
+          <span class="pulse-beacon"></span>
+          <span class="badge-text">Fotos · Edición</span>
+        </div>
+
+        <h1 class="hero-headline">
+          Edita tus fotos con <span class="shimmer-text">facilidad</span>
+        </h1>
+
+        <p class="hero-subtext">
+          Photo Easer te permite eliminar fondos de manera rápida y sencilla, obteniendo resultados de calidad profesional.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#download" class="btn-glow-primary">
+            <span>Descargar app</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#screens" class="btn-subtle">
+            <span>Ver capturas</span>
+          </a>
+        </div>
+
+        <div class="app-rating-row">
+          <div class="rating-stars app-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="rating-copy">4.9/5 · 20 Descargas</span>
+        </div>
+
+        <div class="metrics-row app-metrics reveal">
+          <div class="metric-block">
+            <span class="metric-value" data-counter="20">0</span><span class="metric-suffix">u</span>
+            <span class="metric-label">Descargas</span>
+          </div>
+          <div class="metric-separator"></div>
+          <div class="metric-block">
+            <span class="metric-value" data-counter="3">0</span><span class="metric-suffix">+</span>
+            <span class="metric-label">Comentarios</span>
+          </div>
+          <div class="metric-separator"></div>
+          <div class="metric-block">
+            <span class="metric-value" data-counter="99">0</span><span class="metric-suffix">%</span>
+            <span class="metric-label">Satisfacción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-visual reveal">
+        <div class="app-visual-card">
+          <img src="multimedia2/intro.gif" alt="Pantalla de Photo Easer">
+          <div class="app-visual-overlay">
+            <span>20 descargas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    <section id="overview" class="section">
+      <div class="section-badge reveal">SUMARIO</div>
+      <h2 class="section-title reveal">Una comunidad hecha para fans de anime</h2>
+
+      <div class="cards-grid">
+        <div class="spotlight-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Comunidades activas</h3>
+          <p>Encuentra grupos, foros y clubs por género, temporada o fandom favorito para crear conexiones reales.</p>
+        </div>
+
+        <div class="spotlight-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Mensajería instantánea</h3>
+          <p>Habla con tus amigos, comparte memes, descubre referencias y colabora en conversaciones en tiempo real.</p>
+        </div>
+
+        <div class="spotlight-card reveal">
+          <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Perfil personalizado</h3>
+          <p>Personaliza tu identidad con avatar, bio, listas de favoritos y tu estilo único dentro de la red.</p>
+        </div>
+      </div>
+    </section>
+    -->
+    <section id="features" class="section app-features-section">
+      <div class="section-badge reveal">FUNCIONES</div>
+      <h2 class="section-title reveal">Todo lo que necesitas para vivir la experiencia</h2>
+
+      <div class="feature-layout">
+        <div class="feature-list reveal">
+          <div class="feature-item active">
+            <div class="feature-icon"><i class="fa-solid fa-eraser"></i></div>
+            <div>
+              <h3>Borrador</h3>
+              <p>Borra facilmente el fondo de tus fotos.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+            <div>
+              <h3>Resturador</h3>
+              <p>Restaura partes espesificas de la imagen que fueron borradas por error.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-file-export"></i></div>
+            <div>
+              <h3>Exporta</h3>
+              <p>Exporta el resultado final de tus ediciones en un solo click.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="screens" class="section">
+      <div class="section-badge reveal">CAPTURAS</div>
+      <h2 class="section-title reveal">Explora la app desde dentro</h2>
+
+      <div class="screens-carousel reveal">
+        <button class="screen-carousel-btn prev" type="button" aria-label="Anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="screens-viewport">
+          <div class="screens-track">
+            <!--
+            <div class="screen-card-item is-video">
+              <video autoplay muted loop playsinline poster="multimedia/vid.gif">
+                <source src="multimedia/vid.mp4" type="video/mp4">
+              </video>
+            </div> -->
+            <div class="screen-card-item">
+              <img src="multimedia2/001.png" alt="APP Anime World">
+            </div>
+             <div class="screen-card-item">
+              <img src="multimedia2/002.png" alt="APP Anime World">
+            </div>
+             <div class="screen-card-item">
+              <img src="multimedia2/003.png" alt="APP Anime World">
+            </div>
+
+          </div>
+        </div>
+
+        <button class="screen-carousel-btn next" type="button" aria-label="Siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="info" class="section app-info-section">
+      <div class="section-badge reveal">INFORMACIÓN</div>
+      <h2 class="section-title reveal">Información de la app</h2>
+
+      <div class="app-info-card reveal">
+        <div class="app-info-header">
+          <div class="app-info-brand">
+            <img src="../images/apps_icons/app_icon2.png" alt="Logo de Photo Easer" class="app-mini-logo">
+            <div>
+              <h3>Photo Easer</h3>
+              <span>Herramienta de edición de fotos</span>
+            </div>
+          </div>
+          <div class="app-info-rating">
+            <i class="fa-solid fa-star"></i>
+            <strong>4.9</strong>
+          </div>
+        </div>
+
+        <div class="app-info-grid">
+          <div class="info-box">
+            <span class="info-label">Categoría</span>
+            <strong>Edición de fotos</strong>
+          </div>
+          <div class="info-box">
+            <span class="info-label">Instalaciones</span>
+            <strong>20</strong>
+          </div>
+          <div class="info-box">
+            <span class="info-label">Edad recomendada</span>
+            <strong>+12</strong>
+          </div>
+          <div class="info-box">
+            <span class="info-label">Versión</span>
+            <strong>1.0</strong>
+          </div>
+        </div>
+
+        <div class="app-description-wrap">
+          <div class="app-description" id="appDescription">
+            <p>Photo Easer es una aplicación de edición de fotos que permite a los usuarios eliminar fondos de imágenes de manera rápida y sencilla. Con una interfaz intuitiva y herramientas avanzadas, los usuarios pueden lograr resultados de calidad profesional en cuestión de segundos.</p>
+          </div>
+          <button class="read-more-toggle" type="button" aria-expanded="false">Leer más</button>
+        </div>
+
+        <div class="app-info-links">
+          <a href="anime-world/privacy-policy.html" class="info-link">Política de privacidad</a>
+          <a href="anime-world/terms-and-conditions.html" class="info-link">Términos y condiciones</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section">
+      <div class="section-badge reveal">RESEÑAS</div>
+      <h2 class="section-title reveal">Lo que dice la comunidad</h2>
+
+      <div class="reviews-grid">
+        <div class="review-item reveal">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-quote">“La mejor app para seguir a mi comunidad favorita. La experiencia de chat y perfiles es muy fluida y visualmente increíble.”</p>
+          <div class="reviewer">
+            <div class="reviewer-badge"><img src="../images/persons_comments/user001.jpg" alt="Usuario de Photo Easer" class="reviewer-avatar"></div>
+            <div class="reviewer-info">
+              <h5>Midchel Barbosa</h5>
+              <span>Usuario de Photo Easer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-item reveal">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+           <p class="review-quote">"disfrute mucho la seccion de reels y de videos largos, hay mucho contendio compartido por la comunidad"</p>
+          <div class="reviewer">
+            <div class="reviewer-badge"><img src="../images/persons_comments/user002.jpg" alt="Avatar de Alberto Apolonio" class="reviewer-avatar"></div>
+            <div class="reviewer-info">
+              <h5>Alberto Apolonio</h5>
+              <span>Usuario de Photo Easer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section app-download-section">
+      <div class="download-card reveal">
+        <div>
+          <div class="section-badge">DESCARGA</div>
+          <h2 class="section-title download-title">Listo para entrar a la comunidad</h2>
+          <p>Disponible para Android y acceso web en tu navegador favorito.</p>
+        </div>
+
+        <div class="download-buttons">
+          <button class="download-btn platform-btn active" data-platform="android">
+            <i class="fa-brands fa-android"></i>
+            <span>Android</span>
+          </button>
+          <!--
+          <button class="download-btn platform-btn" data-platform="ios">
+            <i class="fa-brands fa-apple"></i>
+            <span>iOS</span>
+          </button>
+          -->
+          <button class="download-btn platform-btn" data-platform="web">
+            <i class="fa-solid fa-globe"></i>
+            <span>Web</span>
+          </button>
+        </div>
+
+        <div class="download-status">
+          <span class="status-pill" id="platformStatus">Android disponible</span>
+          <small>Versión 1.0 · Descarga rápida</small>
+        </div>
+      </div>
+    </section>
+
+    <div class="download-modal" id="downloadModal" aria-hidden="true">
+      <div class="download-modal-backdrop" data-modal-close></div>
+      <div class="download-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="downloadModalTitle">
+        <button class="download-modal-close" type="button" aria-label="Cerrar ventana" data-modal-close>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="section-badge">ANDROID</div>
+        <h2 id="downloadModalTitle">Elige cómo descargar Photo Easer</h2>
+        <p>Selecciona la opción que prefieras para instalar o abrir la aplicación.</p>
+        <div class="download-modal-options">
+          <button class="download-modal-option" type="button" data-download-option="google-play">
+            <span class="download-option-icon google-play-icon"><i class="fa-brands fa-google-play"></i></span>
+            <span>
+              <strong>Google Play</strong>
+              <small>Instalación desde la tienda oficial</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square option-arrow"></i>
+          </button>
+          <button class="download-modal-option" type="button" data-download-option="apk">
+            <span class="download-option-icon android-icon"><i class="fa-brands fa-android"></i></span>
+            <span>
+              <strong>Descargar APK</strong>
+              <small>Instala la versión Android directamente</small>
+            </span>
+            <i class="fa-solid fa-download option-arrow"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+   <!-- Footer Profesional -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <span class="footer-logo">[VION.Dev]</span>
+        <p>VION Dev &copy; 2026. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/VION-Developer" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="ps/photo-easer.js"></script>
+</body>
+</html>
