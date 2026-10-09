@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const platformUrls = {
     googlePlay: 'https://play.google.com/store/apps/details?id=ap.anime.world',
-    apk: 'https://firebasestorage.googleapis.com/v0/b/anime-social-network.firebasestorage.app/o/apks%2Fapp-release.apk?alt=media&token=7923159b-ed3b-4366-b734-2682b58a3cce',
+    apk: 'https://firebasestorage.googleapis.com/v0/b/anime-social-network.firebasestorage.app/o/apks%2FAnimeWorld1.4.apk?alt=media&token=654ee8c4-8b4d-41ce-aa76-d74345453443',
     web: 'https://anime-social-network.web.app/web-app/login'
   };
 
